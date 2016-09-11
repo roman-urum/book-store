@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-xs-12">
+        <ul class="nav nav-pills">
+            <li>
+                <a ui-sref="paymentType({order: order})">
+                    <span class="glyphicon glyphicon-arrow-left"></span>
+                    Back to select payment type page
+                </a>
+            </li>
+        </ul>
+
+    </div>
+    <div class="col-xs-7">
+        <h3>Summary</h3>
+        <a ui-sref="selectBooks({order: order})"> <h4>You have ordered following books (total sum $ {{order.orderSum}}):</h4> </a>
+        <div class="list-group">
+            <span class="list-group-item list-group-item-action" ng-repeat="orderItem in order.orderItems">
+                <h5 class="list-group-item-heading">{{orderItem.book.title}} ($ {{orderItem.book.price}}) </h5>
+                <p class="list-group-item-text">{{orderItem.book.description}}</p>
+            </span>
+        </div>
+        <hr/>
+        <a ui-sref="shipping({order: order})"><h4>Shipping details:</h4></a>
+        <div>
+            <p> <b>First name:</b> <i> {{order.shippingData.firstName}} </i> </p>
+            <p> <b>Last name:</b> <i> {{order.shippingData.lastName}} </i> </p>
+            <p> <b>Phone:</b> <i> {{order.shippingData.phone}} </i> </p>
+            <p> <b>Shipping address:</b> <i> {{order.shippingData.shippingAddress}} </i> </p>
+            <p> <b>Shipping comments:</b> <i> {{order.shippingData.shippingComments}} </i> </p>
+        </div>
+        <hr/>
+        <a ui-sref="paymentType({order: order})"><h4>Payment type: </h4></a>
+        {{order.paymentType}}
+    </div>
+
+</div>

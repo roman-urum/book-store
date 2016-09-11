@@ -1,0 +1,36 @@
+[{
+  "id": 1,
+  "title": "Мастер и маргарита",
+  "author": "Ниезвестны",
+  "language": "Русский",
+  "price": 134,
+  "description": "Book description book description book description book description book description book description"
+}, {
+  "id": 2,
+  "title": "Кот",
+  "author": "Пушкин",
+  "language": "Русский",
+  "price": 56,
+  "description": "Book description book description book description book description book description book description"
+}, {
+  "id": 3,
+  "title": "Марк твен",
+  "author": "Ниезвестны",
+  "language": "Русский",
+  "price": 567,
+  "description": "Book description book description book description book description book description book description"
+}, {
+  "id": 4,
+  "title": "Жизнь Йосифа сталина",
+  "author": "Эдвард Радзинский",
+  "language": "Русский",
+  "price": 533,
+  "description": "Book description book description book description book description book description book description"
+}, {
+  "id": 5,
+  "title": "Иван васильевич меняет профессию",
+  "author": "Гайдар",
+  "language": "Русский",
+  "price": 55,
+  "description": "Book description book description book description book description book description book description"
+}]

@@ -1,0 +1,17 @@
+{
+  "name": "test-ang-app",
+  "homepage": "https://github.com/roman-urum/code-samples",
+  "description": "for fun",
+  "main": "index",
+  "authors": [
+    "roman.urum"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

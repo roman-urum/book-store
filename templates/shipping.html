@@ -1,0 +1,67 @@
+<div class="row">
+    <div class="col-xs-12">
+        <ul class="nav nav-pills">
+            <li>
+                <a ui-sref="selectBooks({order: order})">
+                    <span class="glyphicon glyphicon-arrow-left"></span> Select books
+                </a>
+            </li>
+            <li class="pull-right">
+                <a ui-sref="paymentType({order: order})" >
+                    Next to select payment type page <span class="glyphicon glyphicon-arrow-right"></span>
+                </a>
+
+            </li>
+        </ul>
+
+    </div>
+    <div class="col-xs-7">
+        <p>
+            <h4>Please enter shipping details below</h4>
+        </p>
+
+        <div class="">
+
+            <div class="panel panel-info">
+                <div class="panel-heading">Shipping</div>
+
+                <div class="panel-body">
+                    <div class="form-group row">
+                        <label for="first-name-text-input" class="col-xs-4 col-form-label">First Name</label>
+                        <div class="col-xs-7">
+                            <input ng-model="order.shippingData.firstName" class="form-control" type="text" placeholder="enter your first name" id="first-name-text-input">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="last-name-text-input" class="col-xs-4 col-form-label">Last Name</label>
+                        <div class="col-xs-7">
+                            <input ng-model="order.shippingData.lastName" class="form-control" type="text" placeholder="enter your last name" id="last-name-text-input">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="phone-text-input" class="col-xs-4 col-form-label">Phone</label>
+                        <div class="col-xs-7">
+                            <input ng-model="order.shippingData.phone" class="form-control" type="text" placeholder="enter your phone number" id="phone-text-input">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="shipping-address-text-input" class="col-xs-4 col-form-label">Shipping address</label>
+                        <div class="col-xs-7">
+                            <input ng-model="order.shippingData.shippingAddress" class="form-control" type="text" placeholder="enter the shipping address" id="shipping-address-text-input">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="shipping-comments-text-input" class="col-xs-4 col-form-label">Shipping comments</label>
+                        <div class="col-xs-7">
+                            <textarea ng-model="order.shippingData.shippingComments" class="form-control" id="shipping-comments-text-input" rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

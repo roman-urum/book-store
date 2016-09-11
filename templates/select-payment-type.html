@@ -1,0 +1,53 @@
+<div class="row">
+    <div class="col-xs-12">
+        <ul class="nav nav-pills">
+            <li>
+                <a ui-sref="shipping({order: order})">
+                    <span class="glyphicon glyphicon-arrow-left"></span>
+                    Back to shipping page
+                </a>
+            </li>
+            <li class="pull-right">
+                <a ui-sref="summary({order: order})" >
+                    Next to summary page <span class="glyphicon glyphicon-arrow-right"></span>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+    <div class="col-xs-7">
+        <p>
+            <h4>Please select payment type below</h4>
+        </p>
+
+        <div class="panel panel-info">
+            <div class="panel-heading">Payment type</div>
+
+            <div class="panel-body">
+
+                <div class="btn-group" data-toggle="buttons">
+
+                    <div class="payment-type-button-controller">
+                        <label class="btn btn-default">
+                            <input type="radio" ng-model="order.paymentType" value="visa" name="payment-card">
+                            <img src="/img/visa.gif" />
+                        </label>
+                    </div>
+
+                    <div class="payment-type-button-controller">
+                        <label class="btn btn-default">
+                            <input type="radio" ng-model="order.paymentType" value="mastercard" name="payment-card">
+                            <img src="/img/mastercardlogo.gif" />
+                        </label>
+                    </div>
+                    <div class="payment-type-button-controller">
+                        <label class="btn btn-default">
+                            <input type="radio" ng-model="order.paymentType" value="discovery" name="payment-card">
+                            <img src="/img/discoverylogo.gif" />
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

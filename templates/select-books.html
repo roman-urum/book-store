@@ -1,0 +1,83 @@
+<div class="row">
+    <div class="col-xs-12">
+        <ul class="nav nav-pills">
+            <li>
+                <a ui-sref="home"> <span class="glyphicon glyphicon-arrow-left"></span> Cancel</a>
+            </li>
+            <li class="pull-right" ng-class="order.orderItems.length <= 0 ? 'disabled': ''">
+                <a ui-sref="shipping({order: order})" ng-show="order.orderItems.length > 0">
+                    Next to shipping page <span class="glyphicon glyphicon-arrow-right"></span>
+                </a>
+
+                <a ng-show="order.orderItems.length <= 0">
+                    Next to shipping page <span class="glyphicon glyphicon-arrow-right"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<p>
+    <h4>Select books below</h4>
+</p>
+<div class="row">
+    <div class="col-xs-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                All books
+            </div>
+            <div class="panel-body">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Book title</th>
+                        <th>Author</th>
+                        <th>Language</th>
+                        <th>Price</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="book in books">
+                        <td>{{ book.title}}</td>
+                        <td>{{ book.author }}</td>
+                        <td>{{ book.language }}</td>
+                        <td>$ {{ book.price }}</td>
+                        <td><a href="#" ng-click="addOrderItem(book)">Select</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-6">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                Selected books, sum $ {{order.orderSum}}
+            </div>
+            <div class="panel-body">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Book title</th>
+                        <th>Author</th>
+                        <th>Language</th>
+                        <th>Price</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="orderItem in order.orderItems">
+                        <td>{{ orderItem.book.title}}</td>
+                        <td>{{ orderItem.book.author }}</td>
+                        <td>{{ orderItem.book.language }}</td>
+                        <td>$ {{ orderItem.book.price }}</td>
+                        <td><a href="#" ng-click="removeBook(book)">Remove</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>

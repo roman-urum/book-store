@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Books store</title>
+
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="./bower_components/angular/angular.js"></script>
+    <script src="./bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+    <script src="client-app/app.js"></script>
+    <script src="client-app/controllers/select-books-controller.js"></script>
+    <script src="client-app/controllers/shipping-controller.js"></script>
+    <script src="client-app/controllers/select-payment-type-controller.js"></script>
+    <script src="client-app/controllers/summary-controller.js"></script>
+
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="/css/main.css" rel="stylesheet" />
+
+
+
+    <base href="/">
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" ui-sref="home">Book makes you smarter</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a ui-sref="selectBooks({orderItems: []})">Start shopping</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">About us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid" ui-view>
+    </div>
+</body>
+</html>
